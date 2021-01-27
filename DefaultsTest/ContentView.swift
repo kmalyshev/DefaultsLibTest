@@ -6,17 +6,30 @@
 //
 
 import SwiftUI
+import Defaults
 
 struct ContentView: View {
+    
+    @Default(.proMode) var proMode
+    
+    @ObservedObject var viewModel: ViewModel
+    
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
+        VStack {
+            
+            Toggle("Pro mode", isOn: $proMode)
+            
+            Text("Total count: \(viewModel.totalCount)")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        
     }
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: .init())
     }
 }

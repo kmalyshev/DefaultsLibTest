@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,9 @@
 		AD46CBFC25C20480005D6ACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD46CBFB25C20480005D6ACF /* Assets.xcassets */; };
 		AD46CBFF25C20480005D6ACF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD46CBFE25C20480005D6ACF /* Preview Assets.xcassets */; };
 		AD46CC0225C20480005D6ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD46CC0025C20480005D6ACF /* Main.storyboard */; };
+		AD46CC0D25C204BE005D6ACF /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = AD46CC0C25C204BE005D6ACF /* Defaults */; };
+		AD46CC1025C20519005D6ACF /* DefaultsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46CC0F25C20519005D6ACF /* DefaultsSettings.swift */; };
+		AD46CC1325C20575005D6ACF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46CC1225C20575005D6ACF /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,8 @@
 		AD46CC0125C20480005D6ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD46CC0325C20480005D6ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD46CC0425C20480005D6ACF /* DefaultsTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DefaultsTest.entitlements; sourceTree = "<group>"; };
+		AD46CC0F25C20519005D6ACF /* DefaultsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsSettings.swift; sourceTree = "<group>"; };
+		AD46CC1225C20575005D6ACF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD46CC0D25C204BE005D6ACF /* Defaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +63,8 @@
 			children = (
 				AD46CBF725C2047E005D6ACF /* AppDelegate.swift */,
 				AD46CBF925C2047E005D6ACF /* ContentView.swift */,
+				AD46CC0F25C20519005D6ACF /* DefaultsSettings.swift */,
+				AD46CC1225C20575005D6ACF /* ViewModel.swift */,
 				AD46CBFB25C20480005D6ACF /* Assets.xcassets */,
 				AD46CC0025C20480005D6ACF /* Main.storyboard */,
 				AD46CC0325C20480005D6ACF /* Info.plist */,
@@ -90,6 +98,9 @@
 			dependencies = (
 			);
 			name = DefaultsTest;
+			packageProductDependencies = (
+				AD46CC0C25C204BE005D6ACF /* Defaults */,
+			);
 			productName = DefaultsTest;
 			productReference = AD46CBF425C2047E005D6ACF /* DefaultsTest.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +128,9 @@
 				Base,
 			);
 			mainGroup = AD46CBEB25C2047E005D6ACF;
+			packageReferences = (
+				AD46CC0B25C204BE005D6ACF /* XCRemoteSwiftPackageReference "Defaults" */,
+			);
 			productRefGroup = AD46CBF525C2047E005D6ACF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,7 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD46CC1025C20519005D6ACF /* DefaultsSettings.swift in Sources */,
 				AD46CBFA25C2047E005D6ACF /* ContentView.swift in Sources */,
+				AD46CC1325C20575005D6ACF /* ViewModel.swift in Sources */,
 				AD46CBF825C2047E005D6ACF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD46CC0B25C204BE005D6ACF /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD46CC0C25C204BE005D6ACF /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD46CC0B25C204BE005D6ACF /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD46CBEC25C2047E005D6ACF /* Project object */;
 }
